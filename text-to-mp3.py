@@ -3,6 +3,7 @@ import re
 import os
 import subprocess
 from pathlib import Path
+import shutil
 
 # ===================== 配置区 =====================
 TEXT_CONTENT = """
@@ -88,3 +89,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+shutil.rmtree(TMP_FOLDER, ignore_errors=True)
